@@ -36,17 +36,17 @@
             height: 50px;
         }
 
-        .navbar h5 {
-            font-family: 'Sensei', sans-serif;
-            letter-spacing: 2px;
+        .navbar h5, .typing-demo {
+            font-family: monospace;
             color: #DDE2E8;
+            font-size: 15px;
         }
 
-        .navbar .logo {
+        .navbar .typing-demo {
             padding-left: 60px;
         }
 
-        .navbar .logo-right h5{
+        .navbar .logo-right h5 {
             padding-right: 60px;
             text-align: right;
         }
@@ -162,15 +162,42 @@
                 background-position: 200% center;
             }
         }
+
+        .logo {
+            /*This part is important for centering*/
+            display: grid;
+            place-items: center;
+        }
+
+        .typing-demo {
+            width: 12ch;
+            animation: typing 2s steps(12), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            font-size: 15px;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
-            <h5>
+            <div class="typing-demo">
                 Kania Adelya
-            </h5>
+            </div>
         </div>
         <div class="logo-right">
             <h5>Temperature Converter</h5>
