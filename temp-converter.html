@@ -11,6 +11,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        @import url('https://fonts.cdnfonts.com/css/sensei');
 
         * {
             margin: 0;
@@ -36,20 +37,28 @@
         }
 
         .navbar h5 {
-            margin: 0 30px;
-            padding: 0 30px;
             font-family: 'Sensei', sans-serif;
             letter-spacing: 2px;
             color: #DDE2E8;
         }
 
+        .navbar .logo {
+            padding-left: 60px;
+        }
+
+        .navbar .logo-right {
+            padding-right: 60px;
+        }
+
         .information {
-            width: 500px;
+            max-width: 380px;
+            text-align: justify;
         }
 
         .information p {
             color: white;
         }
+
 
         .container {
             margin: 0 30px;
@@ -82,7 +91,7 @@
 
         .converter-row {
             display: flex;
-            width: 25%;
+            max-width: 380px;
             justify-content: space-between;
             border-radius: 10px;
             padding: 50px 0px;
@@ -100,7 +109,7 @@
         }
 
         .col input {
-            width: 150px;
+            max-width: 120px;
             height: 30px;
             background: white;
             border-radius: 5px;
@@ -163,7 +172,9 @@
                 Kania Adelya
             </h5>
         </div>
-        <h5>Temperature Converter</h5>
+        <div class="logo-right">
+            <h5>Temperature Converter</h5>
+        </div>
     </nav>
 
     <div class="container">
@@ -284,7 +295,6 @@
 
             let ra = (parseFloat(kelvin.value) * 9 / 5);
             rankine.value = parseFloat(ra.toFixed(2));
-
         }
     </script>
 </body>
